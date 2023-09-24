@@ -1,0 +1,91 @@
+.form {
+  margin-top: 42px;
+}
+.form_login {
+  margin-top: 50px;
+}
+@media (max-width: 340px) {
+  .form {
+    margin-top: 50px;
+  }
+  .form_login {
+    margin-top: 40px;
+  }
+}
+
+.form__button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 0;
+  min-height: 50px;
+  background-color: black;
+  color: #fff;
+  border: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  position: relative;
+}
+.form__button:hover {
+  opacity: 0.8;
+}
+.form__button_login {
+  margin-top: 216px;
+  background-color: white;
+  color: #000;
+}
+@media (max-width: 500px) {
+  .form__button {
+    min-height: 46px;
+  }
+  .form__button_login {
+    margin-top: 185px;
+  }
+}
+@media (max-width: 320px) {
+  .form__button {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .form__button_login {
+    margin-top: 173px;
+  }
+}
+
+.form__button_invalid {
+  margin-top: 25px;
+  width: 100%;
+  padding: 0;
+  min-height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #fff;
+  color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  cursor: none;
+  pointer-events: none;
+}
+.form__button_invalid-login {
+  margin-top: 216px;
+}
+
+@media (max-width: 500px) {
+  .form__button_invalid {
+    min-height: 46px;
+  }
+  .form__button_invalid-login {
+    margin-top: 185px;
+  }
+}
+@media (max-width: 320px) {
+  .form__button_invalid {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .form__button_invalid-login {
+    margin-top: 173px;
+  }
+}

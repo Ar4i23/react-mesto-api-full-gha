@@ -1,0 +1,33 @@
+.footer {
+  margin: 67px auto 60px;
+  max-width: 880px;
+}
+@media (max-width: 1000px) {
+  .footer {
+    width: calc(100% - 60px * 2);
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    width: calc(100% - 30px * 2);
+  }
+}
+@media (max-width: 350px) {
+  .footer {
+    margin: 48px auto 36px;
+    width: calc(100% - 16px * 2);
+  }
+}
+
+.footer__text {
+  color: #545454;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media (max-width: 350px) {
+  .footer__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

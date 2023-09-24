@@ -1,0 +1,50 @@
+.login {
+  max-width: 880px;
+  display: flex;
+  margin: 60px auto 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__title {
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 830px) and (min-width: 500px) {
+  .login__title {
+    font-size: 23px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  .login__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 400px) and (min-width: 320px) {
+  .login__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.login__subtitle {
+  margin: 15px auto 0px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.login__subtitle_link {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.login__subtitle_link:hover {
+  opacity: 0.8;
+}

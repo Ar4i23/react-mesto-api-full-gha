@@ -1,0 +1,236 @@
+.content {
+  max-width: 880px;
+  margin: 40px auto 0;
+}
+@media (max-width: 1000px) {
+  .content {
+    width: calc(100% - 60px * 2);
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    width: calc(100% - 30px * 2);
+  }
+}
+@media (max-width: 350px) {
+  .content {
+    width: calc(100% - 19px * 2);
+  }
+}
+
+.profile {
+  margin: 0 auto 51px;
+  max-width: 880px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 150px 1fr 150px;
+}
+@media (max-width: 830px) {
+  .profile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0 auto 36px;
+  }
+}
+
+.profile__image-ellipse {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-size: cover;
+}
+
+.profile__image-ellipse::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("../../images/pen.svg");
+  background-position: center;
+  background-size: 26px;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.profile__image-ellipse:hover::before {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 830px) {
+  .profile__image-ellipse {
+    margin-right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .profile__image-ellipse {
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 320px) {
+  .profile__image-ellipse {
+    margin-bottom: 29px;
+  }
+}
+
+.profile__info {
+  max-width: 336px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 830px) {
+  .profile__info {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .profile__info {
+    max-width: 270px;
+  }
+}
+
+.profile__info-container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 830px) {
+  .profile__info-container {
+    margin: 14px auto;
+  }
+}
+@media (max-width: 500px) {
+  .profile__info-container {
+    margin: 0 auto 7px;
+    max-width: 282px;
+    justify-content: flex-start;
+  }
+}
+
+.profile__info-title {
+  max-width: 294px;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-right: 18px;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 830px) {
+  .profile__info-title {
+    margin-left: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .profile__info-title {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    max-width: 200px;
+    font-size: 27px;
+    line-height: 33px;
+  }
+}
+
+.profile__info-edit-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-image: url("../../images/pen.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.profile__info-edit-button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 350px) {
+  .profile__info-edit-button {
+    width: 18px;
+    height: 18px;
+    background-size: 7.5px;
+  }
+}
+
+.profile__info-subtitle {
+  max-width: 336px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 830px) {
+  .profile__info-subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .profile__info-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.profile__add-botton {
+  min-width: 150px;
+  height: 50px;
+  padding: 0;
+  border: 2px solid white;
+  background-color: #000;
+  background-image: url("../../images/plus-sign.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.profile__add-botton:hover {
+  opacity: 0.6;
+}
+@media (max-width: 830px) {
+  .profile__add-botton {
+    max-width: 700px;
+    width: 100%;
+    position: static;
+  }
+}
+@media (max-width: 830px) {
+  .profile__add-botton {
+    background-size: 16px;
+  }
+}
+
+.element-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.elements {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  grid-template-rows: repeat(2, minmax(361px, 1fr));
+  align-items: stretch;
+  column-gap: 17px;
+  row-gap: 20px;
+}
