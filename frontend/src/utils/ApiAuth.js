@@ -43,7 +43,7 @@ class ApiAuth {
   }
 }
 const apiAuth = new ApiAuth({
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },
