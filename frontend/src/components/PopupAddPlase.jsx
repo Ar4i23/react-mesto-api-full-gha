@@ -32,7 +32,6 @@ const PopupAddPlace = ({ isOpen, isSending, onClose, onAddPlace }) => {
         isValid={isValid}
       >
         <Input
-          required
           id="name-cread"
           name="name"
           type="text"
@@ -46,7 +45,6 @@ const PopupAddPlace = ({ isOpen, isSending, onClose, onAddPlace }) => {
           error={error.name}
         />
         <Input
-          required
           id="link-cread"
           name="link"
           type="url"

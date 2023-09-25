@@ -21,7 +21,6 @@ const Login = ({ isSending, onSubmit }) => {
         isSending={isSending}
       >
         <Input
-          required
           id="email-login"
           name="email"
           type="email"
@@ -35,7 +34,6 @@ const Login = ({ isSending, onSubmit }) => {
           maxLength={50}
         />
         <Input
-          required
           id="password-login"
           name="password"
           type="password"

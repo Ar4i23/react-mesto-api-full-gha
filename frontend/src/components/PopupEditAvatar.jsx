@@ -32,7 +32,6 @@ const PopupEditAvatar = ({ isSending, isOpen, onClose, onUpdateAvatar }) => {
         onSubmit={handleSubmit}
       >
         <Input
-          required
           id="link-avatar"
           name="avatar"
           type="url"

@@ -46,7 +46,6 @@ const PopupEditProfile = ({ isOpen, isSending, onClose, onUpdateUser }) => {
         isValid={isValid}
       >
         <Input
-          required
           id="name-edit"
           name="name"
           type="text"
@@ -60,7 +59,6 @@ const PopupEditProfile = ({ isOpen, isSending, onClose, onUpdateUser }) => {
           error={error.name}
         />
         <Input
-          required
           id="about-edit"
           name="about"
           type="text"

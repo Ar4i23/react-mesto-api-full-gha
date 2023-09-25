@@ -17,6 +17,7 @@ const Input = ({
   return (
     <>
       <input
+        required
         id={id}
         name={name}
         type={type}

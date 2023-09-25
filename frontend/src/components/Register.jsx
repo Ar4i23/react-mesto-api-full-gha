@@ -20,7 +20,6 @@ const Register = ({ isSending, onSubmit }) => {
         onSubmit={handleRegister}
       >
         <Input
-          required
           id="email-register"
           name="email"
           type="email"
@@ -34,7 +33,6 @@ const Register = ({ isSending, onSubmit }) => {
           maxLength={50}
         />
         <Input
-          required
           id="password-register"
           name="password"
           type="password"
