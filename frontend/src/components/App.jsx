@@ -126,23 +126,6 @@ const App = () => {
       });
   };
 
-  // запрос информации user'а and cards с сервера
-  useEffect(() => {
-    if (loggedIn) {
-      setIsLoading(true);
-      Promise.all([
-        api.getUserInfo(localStorage.token),
-        api.getCards(localStorage.token),
-      ])
-        .then(([dataUser, dataCards]) => {
-          setCurrentUser(dataUser);
-          setCards(dataCards);
-          setIsLoading(false);
-        })
-        .catch((err) => console.error(`Ошибка при загрузки данных: ${err}`));
-    }
-  }, [loggedIn]);
-
   // запрос на повторный вход
   useEffect(() => {
     if (localStorage.token) {
@@ -159,7 +142,24 @@ const App = () => {
     } else {
       setLoggedIn(false);
     }
-  }, []);
+  }, [localStorage.token]);
+
+  // запрос информации user'а and cards с сервера
+  useEffect(() => {
+    if (loggedIn) {
+      setIsLoading(true);
+      Promise.all([
+        api.getUserInfo(localStorage.token),
+        api.getCards(localStorage.token),
+      ])
+        .then(([dataUser, dataCards]) => {
+          setCurrentUser(dataUser);
+          setCards(dataCards);
+          setIsLoading(false);
+        })
+        .catch((err) => console.error(`Ошибка при загрузки данных: ${err}`));
+    }
+  }, [loggedIn]);
 
   // обработчик  удаления карточки на сервере и из UI
   const handleCardDelete = () => {
