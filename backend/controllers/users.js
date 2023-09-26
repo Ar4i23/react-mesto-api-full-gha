@@ -36,7 +36,7 @@ module.exports.updateUserData = (req, res, next) => {
   User.findByIdAndUpdate(
     req.user._id,
     { name, about },
-    { new: true, runValidators: true }
+    { new: true, runValidators: true },
   )
     .orFail()
     .then((user) => res.status(HTTP_STATUS_OK).send(user))
@@ -56,7 +56,7 @@ module.exports.updateUserAvatar = (req, res, next) => {
     User.findByIdAndUpdate(
       req.user._id,
       { avatar: req.body.avatar },
-      { new: true, runValidators: true }
+      { new: true, runValidators: true },
     )
       .orFail()
       .then((user) => res.status(HTTP_STATUS_OK).send(user))
@@ -73,27 +73,25 @@ module.exports.updateUserAvatar = (req, res, next) => {
 };
 
 module.exports.addUser = (req, res, next) => {
-  const { name, about, avatar, email, password } = req.body;
+  const {
+    name, about, avatar, email, password,
+  } = req.body;
   bcrypt
     .hash(password, 10)
-    .then((hash) =>
-      User.create({
-        name,
-        about,
-        avatar,
-        email,
-        password: hash,
-      })
-    )
-    .then((user) =>
-      res.status(HTTP_STATUS_CREATED).send({
-        name: user.name,
-        about: user.about,
-        avatar: user.avatar,
-        email: user.email,
-        _id: user._id,
-      })
-    )
+    .then((hash) => User.create({
+      name,
+      about,
+      avatar,
+      email,
+      password: hash,
+    }))
+    .then((user) => res.status(HTTP_STATUS_CREATED).send({
+      name: user.name,
+      about: user.about,
+      avatar: user.avatar,
+      email: user.email,
+      _id: user._id,
+    }))
 
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -101,8 +99,8 @@ module.exports.addUser = (req, res, next) => {
       } else if (err.code === 11000) {
         next(
           new ConflictError(
-            `Пользователь с таким email:${email}, уже существует`
-          )
+            `Пользователь с таким email:${email}, уже существует`,
+          ),
         );
       } else {
         next(err);
